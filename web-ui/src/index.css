@@ -1,0 +1,23 @@
+/* Define our color variables */
+html {
+  --primary-color: #fff;
+  --secondary-color: #282c34;
+}
+
+/* 
+  Redefine our color variables if the data-theme attr
+  value is "dark
+*/
+html[data-theme='dark'] {
+  --primary-color: #282c34;
+  --secondary-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
