@@ -1,0 +1,35 @@
+{
+  "name": "aws-s3-lambda-rekognition-lambda",
+  "description": "Lambda component of the aws-s3-lambda-rekognition code experiment by Panz3r",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mattia Panzeri",
+    "email": "mattia.panzeri93@gmail.com",
+    "url": "https://github.com/panz3r"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prestart": "npm run build",
+    "start": "lambda-local -l dist/index.js -h handler -e tests/s3_event.json",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "prepackage": "npm run build",
+    "package": "node scripts/package.js"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.511.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.31",
+    "@types/node": "^10.x",
+    "lambda-local": "^1.6.3",
+    "node-zip": "1.1.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^2.x"
+  }
+}
